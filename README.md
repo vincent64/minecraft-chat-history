@@ -1,7 +1,10 @@
 # Minecraft Chat History
 View your Minecraft chat history with color and font formatting.
 
+![GitHub release (latest by date)](https://img.shields.io/github/downloads/vincent64/minecraft-chat-history/v1.0/total)
+![GitHub](https://img.shields.io/github/license/vincent64/minecraft-chat-history)
 ![Lines of code](https://img.shields.io/tokei/lines/github/vincent64/minecraft-chat-history)
+![GitHub issues](https://img.shields.io/github/issues-raw/vincent64/minecraft-chat-history)
 
 ![Screenshot](src/resources/screenshot.png)
 
