@@ -1,0 +1,73 @@
+.date-picker-popup {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+    -fx-border-color: transparent;
+    -fx-padding: 4;
+}
+
+.date-picker-popup > * {
+    -fx-background-color: transparent;
+    -fx-font-family: "Minecraft Regular";
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: white;
+}
+
+.date-picker-popup .spinner .button {
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup .spinner .button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.date-picker-popup > .month-year-pane .label {
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .cell:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.date-picker {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+}
+
+.date-picker > .text-field {
+    -fx-background-color: transparent;
+    -fx-font-family: "Minecraft Regular";
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+    -fx-accent: rgba(255, 255, 255, 0.2);
+}
+
+.date-picker > .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-cursor: hand;
+}
+
+.date-picker > .arrow-button > .arrow {
+    -fx-opacity: 0;
+}
+
+.date-picker:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}

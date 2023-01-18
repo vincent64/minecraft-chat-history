@@ -1,0 +1,45 @@
+.choice-box .context-menu {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+    -fx-border-color: transparent;
+    -fx-min-width: 176;
+    -fx-padding: 4;
+    -fx-mark-color: transparent;
+    -fx-focused-mark-color: transparent;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.choice-box .menu-item > .label {
+    -fx-text-fill: white;
+    -fx-font-family: "Minecraft Regular";
+    -fx-font-size: 16;
+}
+
+.choice-box {
+    -fx-background-color: transparent;
+    -fx-mark-color: white;
+    -fx-background-radius: 0;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+}
+
+.choice-box > .open-button > .arrow {
+    -fx-background-color: transparent;
+}
+
+.choice-box > .open-button {
+    -fx-cursor: hand;
+}
+
+.choice-box > .label {
+    -fx-text-fill: white;
+    -fx-font-family: "Minecraft Regular";
+    -fx-font-size: 16;
+}
+
+.choice-box:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}

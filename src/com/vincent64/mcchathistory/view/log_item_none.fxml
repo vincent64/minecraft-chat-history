@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox stylesheets="@../style/log_item.css" xmlns="http://javafx.com/javafx/19" alignment="CENTER" prefHeight="256">
+   <children>
+      <Label layoutX="6.0" layoutY="6.0" styleClass="logNone" text="No logs found for this date" textFill="WHITE" alignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</HBox>

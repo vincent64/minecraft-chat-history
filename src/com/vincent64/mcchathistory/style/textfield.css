@@ -1,0 +1,16 @@
+.text-field {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-font-family: "Minecraft Regular";
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.6);
+    -fx-accent: rgba(255, 255, 255, 0.2);
+}
+
+.text-field:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}

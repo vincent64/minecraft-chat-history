@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+<AnchorPane id="root" fx:id="root" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/main_window.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vincent64.mcchathistory.window.MainWindowController">
+   <children>
+      <!-- Topbar content -->
+      <Pane fx:id="topbar" layoutX="14.0" layoutY="14.0" prefHeight="46.0" prefWidth="600.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+      <Label layoutX="6.0" layoutY="6.0" styleClass="title" text="Minecraft Chat History" textFill="WHITE" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="close" fitHeight="18.0" fitWidth="18.0" layoutX="559.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="close" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
+         <image>
+            <Image url="@../../../../resources/close_scaled.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView styleClass="maximize" fx:id="maximize" fitHeight="18.0" fitWidth="18.0" layoutX="579.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="16.0">
+         <image>
+            <Image url="@../../../../resources/maximize_scaled.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView styleClass="minimize" fx:id="minimize" fitHeight="18.0" fitWidth="18.0" layoutX="507.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="16.0">
+         <image>
+            <Image url="@../../../../resources/minimize_scaled.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+
+      <!-- Logs content -->
+      <ScrollPane id="scrollPane" fx:id="scrollPane" fitToWidth="true" layoutY="50.0" prefHeight="214.0" prefWidth="600.0" styleClass="scrollPane" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0">
+         <content>
+            <VBox fx:id="scrollContent" />
+         </content>
+      </ScrollPane>
+
+      <!-- Bottom informations -->
+      <AnchorPane id="bottomInfoPane" prefHeight="42" styleClass="bottomInfoPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <Label fx:id="bottomInfo" layoutX="6.0" layoutY="6.0" styleClass="title" textFill="#BBBBBB" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="8.0">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Label>
+         <ImageView fx:id="about" fitHeight="18.0" fitWidth="18.0" layoutX="568.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="12.0">
+            <image>
+               <Image url="@../../../../resources/about_scaled.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+         <ImageView fx:id="settings" fitHeight="18.0" fitWidth="18.0" layoutX="568.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="12.0">
+            <image>
+               <Image url="@../../../../resources/setting_scaled.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+      </AnchorPane>
+
+      <!-- Selection content icons -->
+      <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="559.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="78.0">
+         <image>
+            <Image url="@../../../../resources/down_arrow_scaled.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="559.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="376.0" AnchorPane.topAnchor="78.0">
+         <image>
+            <Image url="@../../../../resources/calendar_scaled.png" />
+         </image>
+      </ImageView>
+
+      <!-- Selection content -->
+      <ChoiceBox fx:id="logTypeChoice" stylesheets="@../style/choicebox.css" layoutX="17.0" layoutY="70.0" prefWidth="180.0" AnchorPane.topAnchor="68.0" AnchorPane.leftAnchor="16.0" />
+      <DatePicker fx:id="logDatePicker" stylesheets="@../style/datepicker.css" layoutX="172.0" layoutY="70.0" AnchorPane.topAnchor="68.0" AnchorPane.leftAnchor="212.0" showWeekNumbers="false" />
+      <TextField fx:id="logSearch" stylesheets="@../style/textfield.css" prefWidth="256.0" AnchorPane.topAnchor="68.0" AnchorPane.rightAnchor="16.0" promptText="Search">
+         <padding>
+            <Insets left="8" top="5" bottom="5" right="32"/>
+         </padding>
+      </TextField>
+      <ImageView fx:id="logSearchIcon" fitHeight="18.0" fitWidth="18.0" layoutX="559.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="78.0">
+         <image>
+            <Image url="@../../../../resources/search_scaled.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

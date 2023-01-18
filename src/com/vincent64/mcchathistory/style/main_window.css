@@ -1,0 +1,57 @@
+.root {
+    -fx-background-image: url("/resources/background.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}
+
+.title {
+    -fx-font-family: "Minecraft Regular";
+}
+
+.close:hover {
+    -fx-opacity: 64%;
+}
+
+.maximize:hover {
+    -fx-opacity: 64%;
+}
+
+.minimize:hover {
+    -fx-opacity: 64%;
+}
+
+.scrollPane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.scrollPane {
+    -fx-background-color: transparent;
+}
+
+.infoPane {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bottomInfoPane {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+
+//General scrollbar style
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .increment-button {
+    -fx-opacity: 0;
+}
+
+.scroll-bar:vertical .decrement-button {
+    -fx-opacity: 0;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color : white;
+    -fx-background-insets : 5.0, 0.0, 0.0;
+    -fx-background-radius : 0em;
+}

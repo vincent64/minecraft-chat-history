@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<HBox fx:id="logPane" minHeight="32.0" styleClass="logItem" stylesheets="@../style/log_item.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vincent64.mcchathistory.list.LogItemController">
+   <children>
+      <TextFlow fx:id="logText" layoutY="10.0" styleClass="logText">
+         <padding>
+            <Insets bottom="4" left="8" right="4" top="4" />
+         </padding>
+      </TextFlow>
+      <Label fx:id="timestampText" layoutX="6.0" layoutY="6.0" minWidth="64" prefHeight="32.0" prefWidth="128" styleClass="timestampText" text="No time" textFill="#BBBBBB" visible="false">
+         <font>
+            <Font size="8.0" />
+         </font>
+         <padding>
+            <Insets left="16" right="8" />
+         </padding>
+      </Label>
+   </children>
+</HBox>

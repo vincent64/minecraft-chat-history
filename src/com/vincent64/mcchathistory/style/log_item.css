@@ -1,0 +1,12 @@
+.logItem {
+    -fx-background-color: transparent;
+}
+
+.logItem:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}
+
+.logNone {
+    -fx-font-family: "Minecraft Regular";
+    -fx-font-size: 16;
+}

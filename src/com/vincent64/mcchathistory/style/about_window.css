@@ -1,0 +1,22 @@
+.root {
+    -fx-background-image: url("/resources/background.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}
+
+.title {
+    -fx-font-family: "Minecraft Regular";
+}
+
+.close:hover {
+    -fx-opacity: 64%;
+}
+
+.text {
+    -fx-font-family: "Minecraft Regular";
+}
+
+.link {
+    -fx-font-family: "Minecraft Regular";
+}

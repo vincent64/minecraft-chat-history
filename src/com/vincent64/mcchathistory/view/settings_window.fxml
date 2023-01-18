@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<AnchorPane id="root" fx:id="root" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets="@../style/settings_window.css" fx:controller="com.vincent64.mcchathistory.window.SettingsWindowController" prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <!-- Topbar content -->
+        <Pane fx:id="topbar" layoutX="14.0" layoutY="14.0" prefHeight="46.0" prefWidth="600.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+        <Label layoutX="6.0" layoutY="6.0" styleClass="title" text="Settings" textFill="WHITE" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="14.0">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="close" fitHeight="18.0" fitWidth="18.0" layoutX="559.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="close" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
+            <image>
+                <Image url="@../../../../resources/close_scaled.png" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+        <Button fx:id="save" prefWidth="96" prefHeight="26" text="Save" alignment="CENTER" styleClass="save" textFill="WHITE" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="8.0">
+            <font>
+                <Font size="16.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+
+        <!-- Settings content -->
+        <ScrollPane id="scrollPane" fx:id="scrollPane" fitToWidth="true" layoutY="50.0" prefHeight="214.0" prefWidth="600.0" styleClass="scrollPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+            <content>
+                <VBox fx:id="scrollContent">
+                    <Label layoutX="6.0" layoutY="6.0" styleClass="titlePath" fx:id="titlePath" text="Logs path" textFill="WHITE">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                        <padding>
+                            <Insets left="16" top="16" right="16"/>
+                        </padding>
+                    </Label>
+                    <TextField fx:id="pathField" stylesheets="@../style/textfield.css" promptText="Path to logs">
+                        <padding>
+                            <Insets left="8" top="5" bottom="5" right="32"/>
+                        </padding>
+                        <VBox.margin>
+                            <Insets left="16" top="8" right="16" bottom="16"/>
+                        </VBox.margin>
+                    </TextField>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
