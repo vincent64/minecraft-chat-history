@@ -10,8 +10,15 @@ public class Settings {
         //Load preferences
         preferences = Preferences.userRoot();
 
+        //Get default path for Windows and MacOS
+        String os = System.getProperty("os").toLowerCase();
+        String defaultPath = System.getProperty("user.home") + "\\AppData\\Roaming\\.minecraft\\logs";
+        if(os.contains("mac")) {
+            defaultPath = System.getProperty("user.home") + "/Library/Application Support/minecraft/logs";
+        }
+
         //Get preferences
-        path = preferences.get("path", System.getProperty("user.home") + "\\AppData\\Roaming\\.minecraft\\logs");
+        path = preferences.get("path", defaultPath);
     }
 
     public static void setPath(String path) {
