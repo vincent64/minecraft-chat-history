@@ -5,6 +5,7 @@ import java.util.prefs.Preferences;
 public class Settings {
     private static final String APPDATA_PATH_WINDOWS = "\\AppData\\Roaming\\";
     private static final String APPDATA_PATH_MACOS = "/Library/Application Support/";
+    private static final String PATH_KEY = "mcch_path";
     private static Preferences preferences;
     private static String path;
 
@@ -22,12 +23,12 @@ public class Settings {
         }
 
         //Get preferences
-        path = preferences.get("path", defaultPath);
+        path = preferences.get(PATH_KEY, defaultPath);
     }
 
     public static void setPath(String path) {
         Settings.path = path;
-        preferences.put("path", path);
+        preferences.put(PATH_KEY, path);
     }
 
     public static String getPath() {
