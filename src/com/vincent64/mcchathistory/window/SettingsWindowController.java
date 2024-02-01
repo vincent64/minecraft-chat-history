@@ -1,6 +1,6 @@
 package com.vincent64.mcchathistory.window;
 
-import com.vincent64.mcchathistory.util.Settings;
+import com.vincent64.mcchathistory.Settings;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;

@@ -1,7 +1,7 @@
 package com.vincent64.mcchathistory.log;
 
 import com.vincent64.mcchathistory.list.LogItem;
-import com.vincent64.mcchathistory.util.Settings;
+import com.vincent64.mcchathistory.Settings;
 
 import java.io.*;
 import java.nio.charset.Charset;
