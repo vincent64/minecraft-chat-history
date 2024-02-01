@@ -9,31 +9,75 @@ View your Minecraft chat history with color and font formatting.
 ![Screenshot](src/resources/screenshot.png)
 
 ### What is Minecraft Chat History ?
-Minecraft Chat History (MCCH) is an application that lets you view all your Minecraft chat history. The app includes a nice formatting with the default color and font of Minecraft.
+Minecraft Chat History (MCCH) is an application that lets you view all of your Minecraft chat history. The app includes a nice formatting with the default color and font of Minecraft.
 
 ### How does this work ?
 The Minecraft chat is continuously saved in log files while you are playing. These log files are compressed in *.gz* files, and can be found in the *logs* folder inside your *.minecraft* folder.
 MCCH decompresses these files, read them and format them according to the Minecraft style, so the chat logs look nice and can be readable for you.
 The logs are displayed by date, to make it more readable.
 
-*Note: If you wish to read the raw logs as they are saved in the files, selected **Raw logs** in the dropdown menu within the app.*
+---
 
+## Installation
+The app works on Windows and macOS. To install the app, read the steps below.
 
-## Download and usage
-The app works on Windows and MacOS. To install the app, read the steps below :
-1. Download Java 19 from [this link](https://www.oracle.com/java/technologies/downloads/#java19).
-2. Execute the downloaded file and follow the installation process.
-3. Once Java is downloaded, come back on this page.
-4. Go to **Release** on the right side of the page.
-5. Select the most recent version.
-6. Download the *.jar* file in **Assets**.
-7. Execute the *.jar* file to launch the app. Done!
+**Note:** There is no installer for macOS. The installer is only for Windows users.
 
+### Windows
+1. Download Java (you probably already have it installed if you play Minecraft).
+2. Go to **Release** on the right side of this page.
+3. Select the latest version.
+4. Download the installer (*installer.exe*).
+5. Execute the installer and follow the steps (you need an internet connection).
+6. The MCCH app shortcut should be in your **Start Menu** on your computer. Done!
+7. **Note:** MCCH and MCCS should be installed in the following directory:
+    ```
+         ../AppData/Roaming/MinecraftChatHistory
+                    └ /MinecraftChatHistory/MCCH.jar
+                    └ /MinecraftChatSearch/MCCS.jar
+    ```
+
+### MacOS
+1. Download Java (you probably already have it installed if you play Minecraft).
+2. Go to **Release** on the right side of this page.
+3. Select the latest version.
+4. Download the *MinecraftChatHistory.jar* and *MinecraftChatSearch.jar* files.
+5. Rename them *MCCH.jar* and *MCCS.jar* respectively.
+6. Move them in the following folder with this scheme:
+    ```
+         ../Library/Application Support/MinecraftChatHistory
+                    └ /MinecraftChatHistory/MCCH.jar
+                    └ /MinecraftChatSearch/MCCS.jar
+    ```
+7. Done! You can now create shortcuts to these files on your desktop.
+
+## Usage
+
+### MCCH
+When launching MCCH, today's chat logs will be displayed on the windows by default. To choose the date, either click on the calendar icon and select the date, or enter the date manually and press on ENTER.
+You can also select the type of logs you want to display between "All", "Chat" or "Raw".
+
+- **Chat:** displays every chat log with formatting and coloring. This is the type of log by default.
+- **All:** displays every log line starting with a *[*, with formatting and coloring
+- **Raw:** displays the entirety of the log content without formatting/coloring, in a raw format
+
+Please note that the *Raw* and *All* log types takes longer to display because of the lack of filtering.
+
+**IMPORTANT:** Make sure to select the correct path to your Minecraft log folder. On MCCH, click the settings button on the bottom right of the window, then check if the default path is correct, and change it if needed.
+
+### MCCS
+MCCS is an extremely powerful CLI (Command Line Interface) tool that is packaged with MCCH. It is optional when installing.
+MCCS lets you search a query/content within all of your Minecraft logs. To launch this tool, either use the shortcut created with the installer or use the following command:
+```java -jar [PATH_TO_MCCS]/MCCS.jar```.
+
+Every command are explained extensively when launching MCCS. The main search command is ```search [query] [startDate] [endDate]```.
+
+---
 
 ## FAQ
 
 ### Some chat logs are colored while some aren't. Why?
-Some chat logs on Minecraft servers don't use the traditional way of coloring chat text. Unfortunately, those color formats aren't saved with the logs, and thus can't be read and formatted by MCCH. Only the default color formats starting with *§* (ex: *§1*, *§a*) can be formatted by MCCH.
+Some Minecraft servers don't use the traditional way of coloring chat text. Unfortunately, those color formats aren't saved with the logs, and thus can't be read and formatted by MCCH. Only the default color formats starting with *§* (ex: *§1*, *§a*) can be formatted by MCCH.
 
 ### The app keeps saying "No logs found for this date". Why?
 There are four causes that can produce this :
@@ -49,8 +93,9 @@ Your chat history is saved in log files, which you can find in the *logs* folder
 If the app froze after you selected a date or a different log type, it can be due to the size of the files. If the log files for this date are huge, the app will spend a lot of time loading them, and sometimes, it fails due to memory usage being too high. So be patient, but if it takes more than a minute, close the app and restart it!
 
 ### The app won't launch. Why?
-If you get an error saying "*A JNI error has occured.*" upon lauching the app, it's because you have an older version of Java installed on your computer. MCCH requires Java 19. Check the *Download and usage* section above.
+If you get an error saying "*A JNI error has occurred.*" upon launching the app, it's because you have an older version of Java installed on your computer. Make sure to check for Java update regularly on your computer.
 
+---
 
 ## Disclaimer
 MCCH relies on the log files' name to display the chat logs by date. Changing the log files' name could not only cause issue with the app, but also with Minecraft itself. MCCH **only reads** the log files and do not alter them in any way.
