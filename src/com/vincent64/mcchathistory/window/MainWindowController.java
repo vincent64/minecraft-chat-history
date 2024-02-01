@@ -41,7 +41,7 @@ public class MainWindowController {
     private ArrayList<LogItem> logItems;
     private double x, y;
 
-    public void initialize(Stage stage) {
+    public void initialize(Stage stage, LocalDate launchDate) {
         //Set close, maximize and minimize button event
         close.setOnMouseClicked(mouseEvent -> stage.close());
         maximize.setOnMouseClicked(mouseEvent -> stage.setMaximized(true));
@@ -57,6 +57,9 @@ public class MainWindowController {
             stage.setX(mouseEvent.getScreenX() + x);
             stage.setY(mouseEvent.getScreenY() + y);
         });
+
+        //Set datepicker default date
+        logDatePicker.setValue(launchDate);
 
         //Set datepicker listener
         logDatePicker.setOnKeyPressed(keyEvent -> {
@@ -123,9 +126,6 @@ public class MainWindowController {
         logTypeChoice.setItems(FXCollections.observableArrayList(logTypes));
         //Set default choicebox value
         logTypeChoice.setValue("Chat logs");
-
-        //Set datepicker current date
-        logDatePicker.setValue(LocalDate.now());
 
         //Initialize settings and about window
         try {

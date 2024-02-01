@@ -1,5 +1,6 @@
 package com.vincent64.mcchathistory.window;
 
+import com.vincent64.mcchathistory.util.DateUtil;
 import com.vincent64.mcchathistory.util.ResizeHelper;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,8 @@ import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
+import java.time.LocalDate;
 
 
 public class MainWindow extends Application {
@@ -36,8 +39,21 @@ public class MainWindow extends Application {
         //Add ResizeHelper to resize undecorated stage
         ResizeHelper.addResizeListener(stage);
 
+        //Set default date on launch as today
+        LocalDate launchDate = LocalDate.now();
+        //Get program parameters
+        Parameters params = getParameters();
+        //Check if the parameters' length is 1
+        if(params.getRaw().size() == 1) {
+            String param = params.getRaw().get(0);
+            //Check if the parameter is a date
+            if (!param.isEmpty() && DateUtil.isValidFormat(param) && DateUtil.isValidDate(param)) {
+                launchDate = DateUtil.toLocalDate(param);
+            }
+        }
+
         //Load stage controller
-        ((MainWindowController) loader.getController()).initialize(stage);
+        ((MainWindowController) loader.getController()).initialize(stage, launchDate);
 
         //Show the stage
         stage.show();
