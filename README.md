@@ -63,6 +63,8 @@ You can also select the type of logs you want to display between "All", "Chat" o
 
 Please note that the *Raw* and *All* log types takes longer to display because of the lack of filtering.
 
+You can also search for a query in the currently displayed logs. Every line that contains the query will be highlighted in yellow.
+
 **IMPORTANT:** Make sure to select the correct path to your Minecraft log folder. On MCCH, click the settings button on the bottom right of the window, then check if the default path is correct, and change it if needed.
 
 ### MCCS
@@ -98,8 +100,10 @@ If you get an error saying "*A JNI error has occurred.*" upon launching the app,
 ---
 
 ## Disclaimer
-MCCH relies on the log files' name to display the chat logs by date. Changing the log files' name could not only cause issue with the app, but also with Minecraft itself. MCCH **only reads** the log files and do not alter them in any way.
+MCCH relies on the log files' name to display the chat logs by date. **NEVER EVER change the name of your log files. This could not only cause issues with MCCH, but also with Minecraft itself!**
+
+MCCH **only reads** the log files and do not alter them in any way.
 
 
 ## Feedback
-Do you want a feature to be added ? Did you find a bug in the app ? Head out to the **Issue** tab above, and suggest your feature/bug there! :)
+Do you want a feature to be added? Did you find a bug in the app? Head out to the **Issue** tab above, and suggest your feature/bug there! :)
