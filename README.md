@@ -39,9 +39,9 @@ The app works on Windows and macOS. To install the app, read the steps below.
     ```
    
 > [!WARNING]
-It is normal if Windows SmartScreen show a message saying "Windows protected your PC".
-It is because the installer require administrator privileges to download the files, which Windows doesn't like.
-The installer contains no virus at all.
+> It is normal if Windows SmartScreen show a message saying "Windows protected your PC".
+> It is because the installer require administrator privileges to download the files, which Windows doesn't like.
+> The installer contains no virus at all.
 
 ### Manual (Windows & macOS)
 1. Download Java (you probably already have it installed if you play Minecraft).
@@ -79,7 +79,8 @@ Please note that the *Raw* and *All* log types takes longer to display because o
 
 You can also search for a query in the currently displayed logs. Every line that contains the query will be highlighted in yellow.
 
-**IMPORTANT:** Make sure to select the correct path to your Minecraft log folder. On MCCH, click the settings button on the bottom right of the window, then check if the default path is correct, and change it if needed.
+> [!IMPORTANT]
+> Make sure to select the correct path to your Minecraft log folder. On MCCH, click the settings button on the bottom right of the window, then check if the default path is correct, and change it if needed.
 
 ### MCCS
 MCCS is an extremely powerful CLI (Command Line Interface) tool that is packaged with MCCH.
