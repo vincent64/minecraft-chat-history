@@ -40,8 +40,10 @@ The app works on Windows and macOS. To install the app, read the steps below.
    
 > [!WARNING]
 > It is normal if Windows SmartScreen show a message saying "Windows protected your PC".
-> It is because the installer require administrator privileges to download the files, which Windows doesn't like.
+> It is because the installer requires administrator privileges to download the files, which Windows doesn't like.
 > The installer contains no virus at all.
+
+
 
 ### Manual (Windows & macOS)
 1. Download Java (you probably already have it installed if you play Minecraft).
