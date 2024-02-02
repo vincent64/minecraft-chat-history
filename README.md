@@ -58,6 +58,7 @@ The app works on Windows and macOS. To install the app, read the steps below.
                     └ /MinecraftChatSearch/MCCS.jar
     ```
 7. Done! You can now create shortcuts to these files on your **Desktop**/**Start Menu**.
+You can also use the upscaled icons in the ```icons``` folder above for your shortcut.
 
 ## Usage
 
