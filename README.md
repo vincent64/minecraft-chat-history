@@ -1,10 +1,9 @@
 # Minecraft Chat History
 View your Minecraft chat history with color and font formatting.
 
-![GitHub release (latest by date)](https://img.shields.io/github/downloads/vincent64/minecraft-chat-history/v1.0/total)
-![GitHub](https://img.shields.io/github/license/vincent64/minecraft-chat-history)
-![Lines of code](https://img.shields.io/tokei/lines/github/vincent64/minecraft-chat-history)
-![GitHub issues](https://img.shields.io/github/issues-raw/vincent64/minecraft-chat-history)
+![Downloads](https://img.shields.io/github/downloads/vincent64/minecraft-chat-history/latest/total)
+![Issues](https://img.shields.io/github/issues-raw/vincent64/minecraft-chat-history)
+![Stars](https://img.shields.io/github/stars/vincent64/minecraft-chat-history)
 
 ![Screenshot](src/resources/screenshot.png)
 
@@ -16,6 +15,8 @@ The Minecraft chat is continuously saved in log files while you are playing. The
 MCCH decompresses these files, read them and format them according to the Minecraft style, so the chat logs look nice and can be readable for you.
 The logs are displayed by date, to make it more readable.
 
+Please read the whole content of this page before installing MCCH.
+
 ---
 
 ## Installation
@@ -23,13 +24,13 @@ The app works on Windows and macOS. To install the app, read the steps below.
 
 **Note:** There is no installer for macOS. The installer is only for Windows users.
 
-### Windows
+### Installer (Windows only)
 1. Download Java (you probably already have it installed if you play Minecraft).
 2. Go to **Release** on the right side of this page.
 3. Select the latest version.
-4. Download the installer (*installer.exe*).
-5. Execute the installer and follow the steps (you need an internet connection).
-6. The MCCH app shortcut should be in your **Start Menu** on your computer. Done!
+4. Download the installer (```MCCHInstaller.exe```).
+5. Execute the installer and follow the steps (you need an internet connection for this step).
+6. The MCCH app shortcut should be in your **Start Menu** and on your **Desktop** on your computer. Done!
 7. **Note:** MCCH and MCCS should be installed in the following directory:
     ```
          ../AppData/Roaming/MinecraftChatHistory
@@ -37,19 +38,26 @@ The app works on Windows and macOS. To install the app, read the steps below.
                     └ /MinecraftChatSearch/MCCS.jar
     ```
 
-### MacOS
+### Manual (Windows & macOS)
 1. Download Java (you probably already have it installed if you play Minecraft).
 2. Go to **Release** on the right side of this page.
 3. Select the latest version.
-4. Download the *MinecraftChatHistory.jar* and *MinecraftChatSearch.jar* files.
-5. Rename them *MCCH.jar* and *MCCS.jar* respectively.
-6. Move them in the following folder with this scheme:
+4. Download the ```MinecraftChatHistory.zip``` ZIP file.
+6. Extract it in the following folder on your computer:
+
+   **Windows:**
+   ```
+         ../AppData/Roaming/MinecraftChatHistory
+                    └ /MinecraftChatHistory/MCCH.jar
+                    └ /MinecraftChatSearch/MCCS.jar
+    ```
+   **MacOS:**
     ```
          ../Library/Application Support/MinecraftChatHistory
                     └ /MinecraftChatHistory/MCCH.jar
                     └ /MinecraftChatSearch/MCCS.jar
     ```
-7. Done! You can now create shortcuts to these files on your desktop.
+7. Done! You can now create shortcuts to these files on your **Desktop**/**Start Menu**.
 
 ## Usage
 
@@ -100,7 +108,7 @@ If you get an error saying "*A JNI error has occurred.*" upon launching the app,
 ---
 
 ## Disclaimer
-MCCH relies on the log files' name to display the chat logs by date. **NEVER EVER change the name of your log files. This could not only cause issues with MCCH, but also with Minecraft itself!**
+MCCH relies on the log files' name to display the chat logs by date. **NEVER EVER CHANGE THE NAME OF YOUR LOG FILES. This could not only cause issues with MCCH, but also with Minecraft itself!**
 
 MCCH **only reads** the log files and do not alter them in any way.
 
