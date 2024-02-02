@@ -76,7 +76,7 @@ You can also search for a query in the currently displayed logs. Every line that
 **IMPORTANT:** Make sure to select the correct path to your Minecraft log folder. On MCCH, click the settings button on the bottom right of the window, then check if the default path is correct, and change it if needed.
 
 ### MCCS
-MCCS is an extremely powerful CLI (Command Line Interface) tool that is packaged with MCCH. It is optional when installing.
+MCCS is an extremely powerful CLI (Command Line Interface) tool that is packaged with MCCH.
 MCCS lets you search a query/content within all of your Minecraft logs. To launch this tool, either use the shortcut created with the installer or use the following command:
 ```java -jar [PATH_TO_MCCS]/MCCS.jar```.
 
