@@ -29,6 +29,12 @@ The app works on Windows and macOS. To install the app, read the steps below.
 2. Go to **Release** on the right side of this page.
 3. Select the latest version.
 4. Download the installer (```MCCHInstaller.exe```).
+
+[!CAUTION]
+It is normal if Windows SmartScreen show a message saying "Windows protected your PC".
+It is because the installer require administrator privileges to download the files, which Windows doesn't like.
+The installer contains no virus at all.
+
 5. Execute the installer and follow the steps (you need an internet connection for this step).
 6. The MCCH app shortcut should be in your **Start Menu** and on your **Desktop** on your computer. Done!
 7. **Note:** MCCH and MCCS should be installed in the following directory:
