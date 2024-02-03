@@ -1,0 +1,90 @@
+﻿<Window x:Class="MCCHInstaller.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MCCHInstaller"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="500"
+        ResizeMode="NoResize" WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/Images/mountain_background.png" Stretch="None"/>
+        </Grid.Background>
+
+        <Grid x:Name="tab1" Visibility="Visible">
+            <Label Content="MCCH Installer" HorizontalAlignment="Center" Margin="0,0,0,100" VerticalAlignment="Center"
+                   FontSize="24" Foreground="White" FontFamily="Resources/Fonts/#Minecraft"/>
+            <Label Content="Click the button below to start the installation." HorizontalAlignment="Center" Margin="0,0,0,32" VerticalAlignment="Center"
+                   FontSize="14" Foreground="LightGray"  FontFamily="Resources/Fonts/#Minecraft"/>
+            <Button Content="Install" HorizontalAlignment="Center" Margin="0,78,0,0" VerticalAlignment="Center" Width="100" Height="42"
+                    Foreground="White" BorderBrush="White" FontSize="15" BorderThickness="2" FontFamily="Resources/Fonts/#Minecraft"
+                    Cursor="Hand" Click="install">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="White" BorderThickness="2">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#33FFFFFF"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+
+        <Grid x:Name="tab2" Visibility="Hidden">
+            <Label Content="MCCH Installer" HorizontalAlignment="Left" Margin="8,8,0,0" VerticalAlignment="Top"
+                   FontSize="16" Foreground="White" FontFamily="Resources/Fonts/#Minecraft"/>
+            <Label Content="Installing..." HorizontalAlignment="Center" Margin="0,0,0,32" VerticalAlignment="Center"
+                   FontSize="20" Foreground="White"  FontFamily="Resources/Fonts/#Minecraft"/>
+            <Label Content="Please don't close the installer." HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Center"
+                   FontSize="14" Foreground="LightGray"  FontFamily="Resources/Fonts/#Minecraft"/>
+            <ProgressBar HorizontalAlignment="Center" Height="4" Margin="0,84,0,0" VerticalAlignment="Center" Width="256"
+                         Background="Transparent" BorderBrush="Transparent" Foreground="White" x:Name="progressbar"/>
+        </Grid>
+
+        <Grid x:Name="tab3" Visibility="Hidden">
+            <Label Content="MCCH Installer" HorizontalAlignment="Left" Margin="8,8,0,0" VerticalAlignment="Top"
+                   FontSize="16" Foreground="White" FontFamily="Resources/Fonts/#Minecraft"/>
+            <Label Content="Installation finished!" HorizontalAlignment="Center" Margin="0,0,0,32" VerticalAlignment="Center"
+                   FontSize="20" Foreground="White"  FontFamily="Resources/Fonts/#Minecraft"/>
+            <Button Content="Close" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Center" Width="100" Height="42"
+                    Foreground="White" BorderBrush="White" FontSize="15" BorderThickness="2" FontFamily="Resources/Fonts/#Minecraft"
+                    Cursor="Hand" Click="close">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="White" BorderThickness="2">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#33FFFFFF"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+
+        <Label Content="Made by vincent64" HorizontalAlignment="Right" Margin="0,0,4,4" VerticalAlignment="Bottom"
+                   FontSize="10" Foreground="#44FFFFFF" FontFamily="Resources/Fonts/#Minecraft"/>
+    </Grid>
+</Window>
