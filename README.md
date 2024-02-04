@@ -24,7 +24,7 @@ The app works on Windows and macOS. To install the app, read the steps below.
 
 **Note:** There is no installer for macOS. The installer is only for Windows users.
 
-### Installer (Windows only)
+### Installer (Windows only, recommended)
 1. Download Java (you probably already have it installed if you play Minecraft).
 2. Go to **Release** on the right side of this page.
 3. Select the latest version.
@@ -40,8 +40,8 @@ The app works on Windows and macOS. To install the app, read the steps below.
    
 > [!WARNING]
 > It is normal if Windows SmartScreen show a message saying "Windows protected your PC".
-> It is because the installer requires administrator privileges to download the files, which Windows doesn't like.
-> The installer contains no virus at all. You can click on "Run anyway" safely.
+> It is because the installer requires administrator privileges to download the files while being a newly created EXE file, which Windows doesn't like.
+> The installer contains no virus at all and the source code of it is available. You can click on "Run anyway" safely.
 
 
 
