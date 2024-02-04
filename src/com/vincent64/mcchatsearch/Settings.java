@@ -12,8 +12,7 @@ public class Settings {
     private static final String PATH_KEY = "mccs_path";
     private static Preferences preferences;
     private static String path;
-    private static String os;
-
+    
     static {
         //Load preferences
         preferences = Preferences.userRoot();
