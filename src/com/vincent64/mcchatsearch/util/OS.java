@@ -1,6 +1,8 @@
 package com.vincent64.mcchatsearch.util;
 
-public static enum OS {
+import java.util.Locale;
+
+public enum OS {
     WINDOWS,
     OSX,
     NIX,
@@ -8,15 +10,14 @@ public static enum OS {
 
     public static OS getCurrent() {
         String os = System.getProperty("os.name").toLowerCase(Locale.ROOT);
-		if (string.contains("win")) {
+		if(os.contains("win")) {
 			return WINDOWS;
-		} else if (string.contains("mac")) {
+		} else if(os.contains("mac")) {
 			return OSX;
-		} else if (string.contains("linux") || string.contains("unix") || string.contains("solaris") || string.contains("sunos")) {
+		} else if(os.contains("linux") || os.contains("unix") || os.contains("solaris") || os.contains("sunos")) {
 			return NIX;
         } else {
             return UNKNOWN;
 		}
-
     }
 }
