@@ -3,7 +3,7 @@ package com.vincent64.mcchatsearch.util;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public static class PathHelper {
+public class PathHelper {
     
     private static final OS os = OS.getCurrent();
 
