@@ -1,10 +1,8 @@
 package com.vincent64.mcchatsearch;
 
-import com.vincent64.mcchathistory.util.OS;
-import com.vincent64.mcchathistory.util.PathHelper;
-import java.io.File;
+import com.vincent64.mcchatsearch.util.PathHelper;
+import java.io.IOException;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.util.prefs.Preferences;
 
@@ -35,13 +33,13 @@ public class Settings {
         return PathHelper.getMCCHRootDirectory().resolve("MinecraftChatHistory").resolve("MCCH.jar").toString();
     }
 
-    public static String getExtractedLogsPath() {
+    public static String getExtractedLogsPath() throws IOException {
         Path path = PathHelper.getMCCHRootDirectory().resolve("MinecraftChatSearch").resolve("ExtractedLogs");
         Files.createDirectories(path);
         return path.toString();
     }
 
-    public static String getSavedResultsPath() {
+    public static String getSavedResultsPath() throws IOException {
         Path path = PathHelper.getMCCHRootDirectory().resolve("MinecraftChatSearch").resolve("SavedResults");
         Files.createDirectories(path);
         return path.toString();
